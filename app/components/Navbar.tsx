@@ -4,10 +4,12 @@ import { useState } from "react";
 import Image from "next/image";
 
 const navLinks = [
-  { href: "#work", label: "// WORK" },
-  { href: "#pricing", label: "// PRICING" },
-  { href: "#how-it-works", label: "// HOW IT WORKS" },
-  { href: "#contact", label: "// CONTACT" },
+  { href: "#services",     label: "// WHY ND" },
+  { href: "#how-it-works", label: "// THE PROCESS" },
+  { href: "#pricing",      label: "// PRICING" },
+  { href: "#faq",          label: "// FAQ" },
+  { href: "#work",         label: "// RECENT WORK" },
+  { href: "#contact",      label: "// CONTACT" },
 ];
 
 export default function Navbar() {
@@ -30,7 +32,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-10 flex-1 justify-center">
+        <div className="hidden md:flex items-center gap-5 flex-1 justify-center">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -46,7 +48,7 @@ export default function Navbar() {
 
         {/* WhatsApp CTA */}
         <a
-          href="https://wa.me/27828900221"
+          href="https://wa.me/27613829267"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:inline-flex items-center border border-[#00e5ff] text-[#00e5ff] font-mono font-bold text-base tracking-widest px-6 py-3 hover:bg-[#00e5ff] hover:text-[#020c18] transition-all duration-200 shrink-0"
@@ -80,7 +82,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://wa.me/27828900221"
+            href="https://wa.me/27613829267"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}

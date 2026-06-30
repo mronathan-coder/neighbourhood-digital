@@ -18,6 +18,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Push scroll-to anchors below the fixed navbar + 28px breathing room */
+section[id] {
+  scroll-margin-top: 9rem;
+}
+
 body {
   background-color: #020c18;
   color: #e8f4fd;

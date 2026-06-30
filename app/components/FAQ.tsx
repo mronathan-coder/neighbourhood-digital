@@ -41,7 +41,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative py-24 px-6">
+    <section id="faq" className="relative py-16 px-6">
       <span className="absolute top-3 left-3 text-[#00e5ff] opacity-25 font-mono text-base leading-none select-none pointer-events-none">+</span>
       <span className="absolute top-3 right-3 text-[#00e5ff] opacity-25 font-mono text-base leading-none select-none pointer-events-none">+</span>
       <span className="absolute bottom-3 left-3 text-[#00e5ff] opacity-25 font-mono text-base leading-none select-none pointer-events-none">+</span>
@@ -49,6 +49,9 @@ export default function FAQ() {
 
       <div className="max-w-7xl mx-auto">
         <div className="reveal mb-16">
+          <p className="font-mono text-[#00e5ff] text-base tracking-[0.3em] uppercase mb-4">
+            // frequently asked questions
+          </p>
           <h2 className="font-mono font-bold text-4xl sm:text-5xl text-[#e8f4fd] tracking-tight">
             <span className="text-[#00e5ff]">// </span>QUESTIONS, ANSWERED.
           </h2>
@@ -62,10 +65,10 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full text-left py-5 px-6 sm:px-8 flex items-start justify-between gap-6 group hover:bg-[#00e5ff]/[0.03] transition-colors duration-200"
+                className={`w-full text-left py-5 px-6 sm:px-8 flex items-start justify-between gap-6 group transition-colors duration-200 ${openIndex === i ? "bg-[#ff1133]/8" : "hover:bg-[#ff1133]/8"}`}
                 aria-expanded={openIndex === i}
               >
-                <span className="font-mono font-bold text-[#e8f4fd] group-hover:text-[#00e5ff] text-sm sm:text-base tracking-wide leading-snug transition-colors duration-200">
+                <span className={`font-mono font-bold text-sm sm:text-base tracking-wide leading-snug transition-colors duration-200 ${openIndex === i ? "text-[#ff1133]" : "text-[#e8f4fd] group-hover:text-[#ff1133]"}`}>
                   {faq.q}
                 </span>
                 <span

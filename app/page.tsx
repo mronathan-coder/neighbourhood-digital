@@ -121,7 +121,7 @@ export default function HomePage() {
             <PixelInvader className="w-14 h-auto" />
           </div>
 
-          <div className="max-w-7xl mx-auto px-6 w-full pt-10 pb-20 relative z-10">
+          <div className="max-w-7xl mx-auto px-6 w-full pt-2 pb-20 relative z-10">
             <div className="reveal">
               <h1 className="font-mono font-bold text-3xl sm:text-5xl lg:text-6xl text-[#e8f4fd] leading-none tracking-tight mb-8 sm:whitespace-nowrap">
                 <span className="text-[#00e5ff]">// </span>YOUR WEBSITE, SORTED.
@@ -134,13 +134,16 @@ export default function HomePage() {
               <p className="font-mono text-lg sm:text-xl mb-8 leading-relaxed">
                 <span className="text-[#00e5ff]">// </span><span className="text-[#4a6080]">starting from r3,500. no hidden fees.</span>
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 mb-8">
                 {["NO LOCK-IN CONTRACTS", "FILES ARE 100% YOURS", "LIVE IN 1–2 WEEKS"].map((chip) => (
                   <span key={chip} className="font-mono text-sm tracking-widest border border-[#00e5ff]/30 text-[#00e5ff]/60 px-4 py-2">
                     {chip}
                   </span>
                 ))}
               </div>
+              <p className="font-mono text-lg sm:text-xl leading-relaxed max-w-2xl">
+                <span className="text-[#00e5ff]">// </span><span className="text-[#4a6080]">in tough economic times, your business deserves a professional, fantastic website - at a price that actually makes sense.</span>
+              </p>
             </div>
           </div>
 
@@ -160,7 +163,7 @@ export default function HomePage() {
         </section>
 
         {/* ══════════════════ WHY ND ══════════════════ */}
-        <section id="services" className="relative py-24 px-6">
+        <section id="services" className="relative py-16 px-6">
           <Crosshairs />
           <PixelInvader className="hidden sm:block absolute top-[10%] right-[4%] text-[#00e5ff] opacity-15 scale-75 animate-float-b animation-delay-1000 pointer-events-none" />
           <PixelInvader className="hidden sm:block absolute bottom-[12%] left-[3%] text-[#00e5ff] opacity-10 scale-100 animate-float-a animation-delay-2500 pointer-events-none" />
@@ -211,12 +214,27 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+
+            <div className="reveal mt-16 pt-16 border-t border-[#00e5ff]/10 max-w-2xl">
+              <p className="font-mono text-[#00e5ff] text-base tracking-[0.3em] uppercase mb-4">
+                // who we are
+              </p>
+              <h3 className="font-mono font-bold text-2xl sm:text-3xl text-[#e8f4fd] tracking-tight mb-8">
+                WE&apos;RE LOCAL. WE&apos;RE SMALL. SAME AS YOU.
+              </h3>
+              <p className="text-[#4a6080] text-base sm:text-lg leading-relaxed mb-6">
+                Neighbourhood Digital is a small web studio based in Johannesburg. We work with local businesses who need a professional website without the agency price tag or the agency runaround.
+              </p>
+              <p className="font-mono text-[#6b7fa0] text-sm tracking-wide">
+                No account managers. No offshore handoffs. Just us.
+              </p>
+            </div>
           </div>
           <div className="absolute bottom-0 left-0 right-0 h-px bg-[#00e5ff]/10" />
         </section>
 
         {/* ══════════════════ HOW IT WORKS ══════════════════ */}
-        <section id="how-it-works" className="relative py-24 px-6">
+        <section id="how-it-works" className="relative py-16 px-6">
           <Crosshairs />
           <PixelInvader className="hidden sm:block absolute top-[8%] left-[6%] text-[#00e5ff] opacity-15 scale-75 animate-float-a animation-delay-2000 pointer-events-none" />
           <PixelInvader className="hidden sm:block absolute bottom-[10%] right-[5%] text-[#00e5ff] opacity-10 scale-125 animate-float-b animation-delay-500 pointer-events-none" />
@@ -271,8 +289,132 @@ export default function HomePage() {
           <div className="absolute bottom-0 left-0 right-0 h-px bg-[#00e5ff]/10" />
         </section>
 
+        {/* ══════════════════ PRICING ══════════════════ */}
+        <section id="pricing" className="relative py-16 px-6">
+          <Crosshairs />
+          <div className="max-w-7xl mx-auto">
+            <div className="reveal mb-4">
+              <p className="font-mono text-[#00e5ff] text-base tracking-[0.3em] uppercase mb-4">
+                // pricing
+              </p>
+              <h2 className="font-mono font-bold text-4xl sm:text-5xl text-[#e8f4fd] tracking-tight">
+                KNOW THE COST UPFRONT.
+              </h2>
+            </div>
+            <p className="reveal font-mono text-[#4a6080] text-sm tracking-wide mb-14">
+              // You know the price before we start. No surprises.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* One-Off */}
+              <div className="reveal reveal-delay-1 group border-2 border-[#00e5ff]/15 p-8 flex flex-col hover:border-[#00e5ff] hover:bg-[#ff1133]/10 transition-all duration-300">
+                <p className="font-mono text-[#4a6080] text-xs tracking-[0.25em] uppercase mb-3 group-hover:text-white transition-colors duration-300">ONE-OFF WEBSITE</p>
+                <div className="mb-1">
+                  <span className="font-mono text-[#4a6080] text-xs tracking-widest uppercase group-hover:text-white transition-colors duration-300">from</span>
+                  <p className="font-mono font-bold text-4xl text-[#e8f4fd]">
+                    <span className="text-[#00e5ff] group-hover:text-[#ff1133] transition-colors duration-300">R3,500</span>
+                    <span className="text-[#4a6080] text-lg group-hover:text-white transition-colors duration-300">/website</span>
+                  </p>
+                </div>
+                <p className="font-mono text-[#4a6080] text-xs tracking-wide mb-0 group-hover:text-white transition-colors duration-300">Most sites land right here. We confirm before we start.</p>
+                <div className="h-px bg-[#00e5ff]/10 my-6" />
+                <ul className="flex flex-col gap-3 text-sm text-[#4a6080] group-hover:text-white flex-1 mb-8 transition-colors duration-300">
+                  {[
+                    "Custom design, built from scratch",
+                    "Mobile responsive",
+                    "Live in 1–2 weeks",
+                    "Google Sheets CMS (optional)",
+                    "Files are yours to keep",
+                  ].map((f) => (
+                    <li key={f} className="flex items-start gap-3">
+                      <span className="font-mono text-[#00e5ff] shrink-0 mt-0.5 group-hover:text-white transition-colors duration-300">→</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="https://wa.me/27613829267"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center border border-[#00e5ff]/30 text-[#00e5ff] font-mono font-bold text-xs tracking-widest py-3 px-4 hover:bg-[#00e5ff] hover:text-[#020c18] transition-all duration-200"
+                >
+                  [ WHATSAPP US → ]
+                </a>
+              </div>
+
+              {/* Hosting & Care */}
+              <div className="reveal reveal-delay-2 group border-2 border-[#00e5ff]/15 p-8 flex flex-col hover:border-[#00e5ff] hover:bg-[#ff1133]/10 transition-all duration-300">
+                <p className="font-mono text-[#4a6080] text-xs tracking-[0.25em] uppercase mb-3 group-hover:text-white transition-colors duration-300">HOSTING &amp; CARE</p>
+                <p className="font-mono font-bold text-4xl text-[#e8f4fd] mb-1">
+                  <span className="text-[#00e5ff] group-hover:text-[#ff1133] transition-colors duration-300">R250</span>
+                  <span className="text-[#4a6080] text-lg group-hover:text-white transition-colors duration-300">/month</span>
+                </p>
+                <div className="h-px bg-[#00e5ff]/10 my-6" />
+                <ul className="flex flex-col gap-3 text-sm text-[#4a6080] group-hover:text-white flex-1 mb-8 transition-colors duration-300">
+                  {[
+                    "Your site stays live — we watch it so you don't have to",
+                    "Security kept up to date, automatically",
+                    "Something breaks? We fix it, same day",
+                    "SSL included (the padlock in the browser bar)",
+                    "Monthly speed checks — we keep things fast",
+                  ].map((f) => (
+                    <li key={f} className="flex items-start gap-3">
+                      <span className="font-mono text-[#00e5ff] shrink-0 mt-0.5 group-hover:text-white transition-colors duration-300">→</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="https://wa.me/27613829267"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center border border-[#00e5ff]/30 text-[#00e5ff] font-mono font-bold text-xs tracking-widest py-3 px-4 hover:bg-[#00e5ff] hover:text-[#020c18] transition-all duration-200"
+                >
+                  [ WHATSAPP US → ]
+                </a>
+              </div>
+
+              {/* Retainer */}
+              <div className="reveal reveal-delay-3 group border-2 border-[#00e5ff]/15 p-8 flex flex-col hover:border-[#00e5ff] hover:bg-[#ff1133]/10 transition-all duration-300">
+                <p className="font-mono text-[#4a6080] text-xs tracking-[0.25em] uppercase mb-3 group-hover:text-white transition-colors duration-300">RETAINER</p>
+                <div className="mb-1">
+                  <span className="font-mono text-[#4a6080] text-xs tracking-widest uppercase group-hover:text-white transition-colors duration-300">from</span>
+                  <p className="font-mono font-bold text-4xl text-[#e8f4fd]">
+                    <span className="text-[#00e5ff] group-hover:text-[#ff1133] transition-colors duration-300">R750</span>
+                    <span className="text-[#4a6080] text-lg group-hover:text-white transition-colors duration-300">/month</span>
+                  </p>
+                </div>
+                <div className="h-px bg-[#00e5ff]/10 my-6" />
+                <ul className="flex flex-col gap-3 text-sm text-[#4a6080] group-hover:text-white flex-1 mb-8 transition-colors duration-300">
+                  {[
+                    "Everything in Hosting & Care",
+                    "Ongoing content updates",
+                    "Design tweaks & changes",
+                    "Priority support",
+                    "Proactive monthly review — we flag issues before you notice them",
+                  ].map((f) => (
+                    <li key={f} className="flex items-start gap-3">
+                      <span className="font-mono text-[#00e5ff] shrink-0 mt-0.5 group-hover:text-white transition-colors duration-300">→</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="https://wa.me/27613829267"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center border border-[#00e5ff]/30 text-[#00e5ff] font-mono font-bold text-xs tracking-widest py-3 px-4 hover:bg-[#00e5ff] hover:text-[#020c18] transition-all duration-200"
+                >
+                  [ WHATSAPP US → ]
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-[#00e5ff]/10" />
+        </section>
+
         {/* ══════════════════ WHAT YOU ACTUALLY GET ══════════════════ */}
-        <section className="relative py-24 px-6">
+        <section id="whats-included" className="relative py-16 px-6">
           <Crosshairs />
           <PixelInvader className="hidden sm:block absolute top-[6%] right-[7%] text-[#00e5ff] opacity-15 scale-75 animate-float-b animation-delay-1500 pointer-events-none" />
           <PixelInvader className="hidden sm:block absolute bottom-[8%] left-[5%] text-[#00e5ff] opacity-10 scale-100 animate-float-a animation-delay-1000 pointer-events-none" />
@@ -337,161 +479,11 @@ export default function HomePage() {
           <div className="absolute bottom-0 left-0 right-0 h-px bg-[#00e5ff]/10" />
         </section>
 
-        {/* ══════════════════ GOOGLE SHEETS CMS CALLOUT ══════════════════ */}
-        <section className="relative py-24 px-6 bg-[#cce8f4]">
-          <div className="max-w-7xl mx-auto">
-            <div className="reveal">
-              <p className="font-mono text-[#020c18]/50 text-base tracking-[0.3em] uppercase mb-8">
-                // how the cms works
-              </p>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                <div className="border-l-4 border-[#020c18]/20 pl-8">
-                  <p className="font-mono font-bold text-2xl sm:text-3xl lg:text-4xl text-[#020c18] leading-tight tracking-tight uppercase">
-                    YOUR SPREADSHEET. YOUR SITE.
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center gap-4">
-                  <p className="text-[#020c18]/70 text-base sm:text-lg leading-relaxed">
-                    You don&apos;t need a login. You don&apos;t need to call us.
-                    Open your Google Sheet, change a price, hit save.
-                    Your site updates automatically.
-                  </p>
-                  <p className="text-[#020c18]/70 text-base leading-relaxed">
-                    That&apos;s it. No dashboard. No plugins. No developer.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ══════════════════ PRICING ══════════════════ */}
-        <section id="pricing" className="relative py-24 px-6">
-          <Crosshairs />
-          <div className="max-w-7xl mx-auto">
-            <div className="reveal mb-4">
-              <p className="font-mono text-[#00e5ff] text-base tracking-[0.3em] uppercase mb-4">
-                // pricing
-              </p>
-              <h2 className="font-mono font-bold text-4xl sm:text-5xl text-[#e8f4fd] tracking-tight">
-                KNOW THE COST UPFRONT.
-              </h2>
-            </div>
-            <p className="reveal font-mono text-[#4a6080] text-sm tracking-wide mb-14">
-              // You know the price before we start. No surprises.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* One-Off */}
-              <div className="reveal reveal-delay-1 border border-[#00e5ff]/15 p-8 flex flex-col hover:border-[#00e5ff]/40 transition-colors duration-300">
-                <p className="font-mono text-[#4a6080] text-xs tracking-[0.25em] uppercase mb-3">ONE-OFF WEBSITE</p>
-                <p className="font-mono font-bold text-4xl text-[#e8f4fd] mb-1">
-                  <span className="text-[#00e5ff]">R3,500</span>
-                </p>
-                <p className="font-mono text-[#4a6080] text-xs tracking-wide mb-0">Most sites land right here. We confirm before we start.</p>
-                <div className="h-px bg-[#00e5ff]/10 my-6" />
-                <ul className="flex flex-col gap-3 text-sm text-[#4a6080] flex-1 mb-8">
-                  {[
-                    "Custom design, built from scratch",
-                    "Mobile responsive",
-                    "Live in 1–2 weeks",
-                    "Google Sheets CMS (optional)",
-                    "Files are yours to keep",
-                  ].map((f) => (
-                    <li key={f} className="flex items-start gap-3 font-mono">
-                      <span className="text-[#00e5ff] shrink-0 mt-0.5">→</span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="https://wa.me/27828900221"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-center border border-[#00e5ff]/30 text-[#00e5ff] font-mono font-bold text-xs tracking-widest py-3 px-4 hover:bg-[#00e5ff] hover:text-[#020c18] transition-all duration-200"
-                >
-                  [ GET A QUOTE ]
-                </a>
-              </div>
-
-              {/* Hosting — featured */}
-              <div className="reveal reveal-delay-2 border border-[#00e5ff] p-8 flex flex-col relative">
-                <div className="absolute -top-3 left-6">
-                  <span className="bg-[#00e5ff] text-[#020c18] font-mono font-bold text-xs px-3 py-1 tracking-widest">
-                    [ POPULAR ]
-                  </span>
-                </div>
-                <p className="font-mono text-[#4a6080] text-xs tracking-[0.25em] uppercase mb-3 mt-2">HOSTING &amp; CARE</p>
-                <p className="font-mono font-bold text-4xl text-[#e8f4fd] mb-1">
-                  <span className="text-[#00e5ff]">R350</span>
-                  <span className="text-[#4a6080] text-lg">/month</span>
-                </p>
-                <div className="h-px bg-[#00e5ff]/20 my-6" />
-                <ul className="flex flex-col gap-3 text-sm text-[#4a6080] flex-1 mb-8">
-                  {[
-                    "Your site stays live — we watch it so you don't have to",
-                    "Security kept up to date, automatically",
-                    "Something breaks? We fix it, same day",
-                    "SSL included (the padlock in the browser bar)",
-                    "Monthly speed checks — we keep things fast",
-                  ].map((f) => (
-                    <li key={f} className="flex items-start gap-3 font-mono">
-                      <span className="text-[#00e5ff] shrink-0 mt-0.5">→</span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="https://wa.me/27828900221"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-center bg-[#00e5ff] text-[#020c18] font-mono font-bold text-xs tracking-widest py-3 px-4 hover:bg-white transition-colors duration-200"
-                >
-                  [ GET STARTED ]
-                </a>
-              </div>
-
-              {/* Retainer */}
-              <div className="reveal reveal-delay-3 border border-[#00e5ff]/15 p-8 flex flex-col hover:border-[#00e5ff]/40 transition-colors duration-300">
-                <p className="font-mono text-[#4a6080] text-xs tracking-[0.25em] uppercase mb-3">RETAINER</p>
-                <p className="font-mono font-bold text-4xl text-[#e8f4fd] mb-1">
-                  <span className="text-[#00e5ff]">R750</span>
-                  <span className="text-[#4a6080] text-lg">/month</span>
-                </p>
-                <div className="h-px bg-[#00e5ff]/10 my-6" />
-                <ul className="flex flex-col gap-3 text-sm text-[#4a6080] flex-1 mb-8">
-                  {[
-                    "Everything in Hosting & Care",
-                    "Ongoing content updates",
-                    "Design tweaks & changes",
-                    "Priority support",
-                    "Proactive monthly review — we flag issues before you notice them",
-                  ].map((f) => (
-                    <li key={f} className="flex items-start gap-3 font-mono">
-                      <span className="text-[#00e5ff] shrink-0 mt-0.5">→</span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="https://wa.me/27828900221"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-center border border-[#00e5ff]/30 text-[#00e5ff] font-mono font-bold text-xs tracking-widest py-3 px-4 hover:bg-[#00e5ff] hover:text-[#020c18] transition-all duration-200"
-                >
-                  [ GET A QUOTE ]
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-[#00e5ff]/10" />
-        </section>
-
         {/* ══════════════════ FAQ ══════════════════ */}
         <FAQ />
 
         {/* ══════════════════ WORK ══════════════════ */}
-        <section id="work" className="relative py-24 px-6 bg-[#071020]">
+        <section id="work" className="relative py-16 px-6 bg-[#071020]">
           <Crosshairs />
           <div className="max-w-7xl mx-auto">
             <div className="reveal mb-16">
@@ -548,32 +540,8 @@ export default function HomePage() {
           <div className="absolute bottom-0 left-0 right-0 h-px bg-[#00e5ff]/10" />
         </section>
 
-        {/* ══════════════════ ABOUT ══════════════════ */}
-        <section className="relative py-24 px-6">
-          <Crosshairs />
-          <div className="max-w-7xl mx-auto">
-            <div className="reveal mb-12">
-              <p className="font-mono text-[#00e5ff] text-base tracking-[0.3em] uppercase mb-4">
-                // who we are
-              </p>
-              <h2 className="font-mono font-bold text-4xl sm:text-5xl text-[#e8f4fd] tracking-tight">
-                WE&apos;RE LOCAL. WE&apos;RE SMALL.<br className="hidden sm:block" /> SAME AS YOU.
-              </h2>
-            </div>
-            <div className="reveal max-w-2xl">
-              <p className="text-[#4a6080] text-base sm:text-lg leading-relaxed mb-6">
-                Neighbourhood Digital is a small web studio based in Johannesburg. We work with local businesses who need a professional website without the agency price tag or the agency runaround.
-              </p>
-              <p className="font-mono text-[#6b7fa0] text-sm tracking-wide">
-                No account managers. No offshore handoffs. Just us.
-              </p>
-            </div>
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-[#00e5ff]/10" />
-        </section>
-
         {/* ══════════════════ QUOTE — LIGHT SECTION ══════════════════ */}
-        <section className="relative py-24 px-6 bg-[#cce8f4]">
+        <section className="relative py-16 px-6 bg-[#cce8f4]">
           <div className="max-w-7xl mx-auto">
             <div className="reveal grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div className="border-l-4 border-[#00e5ff] pl-8">
@@ -593,55 +561,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ══════════════════ FAQ ══════════════════ */}
-        <section className="relative py-24 px-6 bg-[#071020]">
-          <Crosshairs />
-          <div className="max-w-7xl mx-auto">
-            <div className="reveal mb-16">
-              <p className="font-mono text-[#00e5ff] text-base tracking-[0.3em] uppercase mb-4">
-                // questions we get asked
-              </p>
-              <h2 className="font-mono font-bold text-4xl sm:text-5xl text-[#e8f4fd] tracking-tight">
-                THINGS YOU&apos;RE PROBABLY WONDERING.
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[#00e5ff]/10">
-              {[
-                {
-                  q: "\"I already have a Wix site.\"",
-                  a: "That's fine. Wix works — until it doesn't. We'll tell you honestly if a move makes sense for your business.",
-                },
-                {
-                  q: "\"What if I want changes after launch?\"",
-                  a: "Small content edits you can handle yourself via Google Sheets. Anything bigger — new pages, redesigns — we quote you upfront. No surprise bills.",
-                },
-                {
-                  q: "\"Do I own the domain and hosting?\"",
-                  a: "Yes, always. If you ever leave us, you take everything with you. We don't hold your site hostage.",
-                },
-                {
-                  q: "\"What kind of businesses do you work with?\"",
-                  a: "Restaurants, trades, retail, health, salons, services. If you have a business that needs to be found online, we can help.",
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className={`reveal reveal-delay-${i + 1} p-8 border-[#00e5ff]/10 ${i % 2 === 0 ? "md:border-r" : ""} ${i < 2 ? "border-b" : ""}`}
-                >
-                  <p className="font-mono font-bold text-[#00e5ff] text-sm tracking-wide mb-4 leading-snug">
-                    {item.q}
-                  </p>
-                  <p className="text-[#4a6080] text-sm leading-relaxed">{item.a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-[#00e5ff]/10" />
-        </section>
 
         {/* ══════════════════ CONTACT / CTA ══════════════════ */}
-        <section id="contact" className="relative py-24 px-6 text-center">
+        <section id="contact" className="relative py-16 px-6 text-center">
           <Crosshairs />
           <PixelInvader className="absolute top-[20%] left-[8%] text-[#00e5ff] opacity-20 scale-150 animate-float-a animation-delay-500" />
           <PixelInvader className="absolute bottom-[25%] right-[8%] text-[#00e5ff] opacity-15 scale-125 animate-float-b animation-delay-1500" />
@@ -654,19 +576,26 @@ export default function HomePage() {
               <h2 className="font-mono font-bold text-4xl sm:text-5xl lg:text-6xl text-[#e8f4fd] tracking-tight mb-6">
                 READY TO SORT YOUR WEBSITE?
               </h2>
-              <p className="text-[#4a6080] italic mb-12 text-base leading-relaxed">
+              <p className="font-mono text-[#4a6080] italic mb-12 text-base leading-relaxed">
                 WhatsApp us. Tell us about your business. No commitment, no pressure.
               </p>
 
               <a
-                href="tel:0828900221"
-                className="block font-mono font-bold text-5xl sm:text-6xl lg:text-7xl text-[#00e5ff] tracking-widest mb-10 hover:text-white transition-colors duration-200"
+                href="tel:+27613829267"
+                className="block font-mono font-bold text-5xl sm:text-6xl lg:text-7xl text-[#00e5ff] tracking-widest mb-4 hover:text-white transition-colors duration-200"
               >
-                082 890 0221
+                061 382 9267
               </a>
 
               <a
-                href="https://wa.me/27828900221"
+                href="mailto:oliver@neighbourhooddigital.co.za"
+                className="block font-mono text-[#4a6080] text-base tracking-wide mb-10 hover:text-[#00e5ff] transition-colors duration-200"
+              >
+                oliver@neighbourhooddigital.co.za
+              </a>
+
+              <a
+                href="https://wa.me/27613829267"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-[#00e5ff] text-[#020c18] font-mono font-bold text-sm tracking-widest px-10 py-4 hover:bg-white transition-colors duration-200 mb-8"
@@ -676,7 +605,7 @@ export default function HomePage() {
 
               <p className="font-mono text-[#4a6080] text-sm tracking-widest">
                 <a
-                  href="mailto:hello@neighbourhooddigital.co.za"
+                  href="mailto:oliver@neighbourhooddigital.co.za"
                   className="hover:text-[#00e5ff] transition-colors duration-200"
                 >
                   neighbourhooddigital.co.za
