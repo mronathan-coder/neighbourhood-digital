@@ -56,7 +56,7 @@ interface Project {
   name: string;
   desc: string;
   url: string;
-  gradient: string;
+  screenshot: string;
   concept: boolean;
 }
 
@@ -66,7 +66,7 @@ const PROJECTS: Project[] = [
     name: "Change_X Academy of Business",
     desc: "Team performance consultancy. Built fresh on Next.js, live and in active use.",
     url: "https://changex-academy-seven.vercel.app/",
-    gradient: "linear-gradient(135deg, #050d1a 0%, #0d1f3c 60%, #02080f 100%)",
+    screenshot: "/screenshots/changex.png",
     concept: false,
   },
   {
@@ -74,7 +74,7 @@ const PROJECTS: Project[] = [
     name: "Neighbourhood Digital",
     desc: "Our own site, built on exactly what we sell our clients.",
     url: "https://neighbourhood-digital.vercel.app/",
-    gradient: "linear-gradient(135deg, #001a2e 0%, #00334d 60%, #001018 100%)",
+    screenshot: "/screenshots/neighbourhood-digital.png",
     concept: false,
   },
   {
@@ -82,7 +82,7 @@ const PROJECTS: Project[] = [
     name: "Illovo Practice",
     desc: "Concept design for a family medicine practice. Not a live client — a demonstration of range.",
     url: "/concepts/illovo-practice.html",
-    gradient: "linear-gradient(135deg, #0a1020 0%, #142040 60%, #050a18 100%)",
+    screenshot: "/screenshots/illovo-practice.png",
     concept: true,
   },
   {
@@ -90,7 +90,7 @@ const PROJECTS: Project[] = [
     name: "Tide & Ember",
     desc: "Concept design for an upscale steakhouse. Not a live client — a demonstration of range.",
     url: "/concepts/tide-and-ember.html",
-    gradient: "linear-gradient(135deg, #150a05 0%, #2a1208 60%, #0a0502 100%)",
+    screenshot: "/screenshots/tide-and-ember.png",
     concept: true,
   },
 ];
@@ -240,18 +240,25 @@ export default function WorkSection() {
               >
                 {/* Preview thumbnail area */}
                 <div
-                  className="h-48 relative overflow-hidden"
-                  style={{ background: project.gradient }}
+                  className="h-48 relative overflow-hidden bg-[#020c18]"
+                  style={{
+                    backgroundImage: `url(${project.screenshot})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "top center",
+                  }}
                 >
+                  {/* Dark overlay — lifts on hover to reveal more of the screenshot */}
+                  <div className="absolute inset-0 bg-[#020c18]/60 group-hover:bg-[#020c18]/30 transition-all duration-400" />
+
                   {project.concept && (
-                    <span className="absolute top-3 left-3 font-mono text-[10px] tracking-widest border border-[#4a6080]/60 text-[#4a6080] px-2 py-1 bg-[#020c18]/60">
+                    <span className="absolute top-3 left-3 font-mono text-[10px] tracking-widest border border-[#4a6080]/60 text-[#4a6080] px-2 py-1 bg-[#020c18]/60 z-10">
                       CONCEPT
                     </span>
                   )}
-                  <PixelInvader className="absolute bottom-3 right-3 text-[#00e5ff] opacity-20 scale-75" />
+
                   {/* Hover "preview" hint */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
-                    <span className="font-mono text-[#00e5ff] text-xs tracking-[0.3em]">
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                    <span className="font-mono text-white text-xs tracking-[0.3em] bg-[#020c18]/60 px-3 py-2">
                       [ PREVIEW → ]
                     </span>
                   </div>
