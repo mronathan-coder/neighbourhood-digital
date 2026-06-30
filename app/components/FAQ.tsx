@@ -65,10 +65,10 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className={`w-full text-left py-5 px-6 sm:px-8 flex items-start justify-between gap-6 group transition-colors duration-200 ${openIndex === i ? "bg-[#ff1133]/8" : "hover:bg-[#ff1133]/8"}`}
+                className={`w-full text-left py-5 px-6 sm:px-8 flex items-start justify-between gap-6 group transition-colors duration-200 ${openIndex === i ? "bg-[#ff1133]/8" : "hover:bg-[#ff1133]/8 active:bg-[#ff1133]/8"}`}
                 aria-expanded={openIndex === i}
               >
-                <span className={`font-mono font-bold text-sm sm:text-base tracking-wide leading-snug transition-colors duration-200 ${openIndex === i ? "text-[#ff1133]" : "text-[#e8f4fd] group-hover:text-[#ff1133]"}`}>
+                <span className={`font-mono font-bold text-sm sm:text-base tracking-wide leading-snug transition-colors duration-200 ${openIndex === i ? "text-[#ff1133]" : "text-[#e8f4fd] group-hover:text-[#ff1133] group-active:text-[#ff1133]"}`}>
                   {faq.q}
                 </span>
                 <span

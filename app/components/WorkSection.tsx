@@ -236,7 +236,7 @@ export default function WorkSection() {
               <button
                 key={project.name}
                 onClick={() => setActiveProject(project)}
-                className={`reveal reveal-delay-${i + 1} group border border-[#00e5ff]/10 hover:border-[#00e5ff]/30 transition-all duration-300 text-left w-full cursor-pointer`}
+                className={`reveal reveal-delay-${i + 1} group border border-[#00e5ff]/10 hover:border-[#00e5ff]/30 active:border-[#00e5ff]/30 active:bg-[#ff1133]/8 transition-all duration-300 text-left w-full cursor-pointer`}
               >
                 {/* Preview thumbnail area */}
                 <div
@@ -257,7 +257,7 @@ export default function WorkSection() {
                   )}
 
                   {/* Hover "preview" hint */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                  <div className="absolute inset-0 flex items-center justify-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 z-10">
                     <span className="font-mono text-white text-xs tracking-[0.3em] bg-[#020c18]/60 px-3 py-2">
                       [ PREVIEW → ]
                     </span>
@@ -276,7 +276,7 @@ export default function WorkSection() {
                       </span>
                     )}
                   </div>
-                  <h3 className="font-mono font-bold text-[#e8f4fd] text-base mb-2 group-hover:text-[#00e5ff] transition-colors">
+                  <h3 className="font-mono font-bold text-[#e8f4fd] text-base mb-2 group-hover:text-[#00e5ff] group-active:text-[#00e5ff] transition-colors">
                     {project.name}
                   </h3>
                   <p className="text-[#a8c4d8] text-sm leading-relaxed">{project.desc}</p>

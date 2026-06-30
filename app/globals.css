@@ -26,6 +26,7 @@ section[id] {
 body {
   background-color: #020c18;
   color: #e8f4fd;
+  overflow-x: hidden;
   /* Dot-grid texture matching the reference design */
   background-image: radial-gradient(circle, rgba(0, 229, 255, 0.18) 1px, transparent 1px);
   background-size: 28px 28px;

@@ -306,7 +306,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* One-Off */}
               <div className="reveal reveal-delay-1 group border-2 border-[#00e5ff]/15 p-8 flex flex-col hover:border-[#00e5ff] hover:bg-[#ff1133]/10 transition-all duration-300">
-                <p className="font-mono text-[#a8c4d8] text-xs tracking-[0.25em] uppercase mb-3 group-hover:text-white transition-colors duration-300">ONE-OFF WEBSITE</p>
+                <p className="font-mono text-[#a8c4d8] text-xs sm:text-base tracking-[0.25em] uppercase mb-3 group-hover:text-white transition-colors duration-300">ONE-OFF WEBSITE</p>
                 <div className="mb-1">
                   <span className="font-mono text-[#a8c4d8] text-xs tracking-widest uppercase group-hover:text-white transition-colors duration-300">from</span>
                   <p className="font-mono font-bold text-4xl text-[#e8f4fd]">
@@ -342,7 +342,7 @@ export default function HomePage() {
 
               {/* Hosting & Care */}
               <div className="reveal reveal-delay-2 group border-2 border-[#00e5ff]/15 p-8 flex flex-col hover:border-[#00e5ff] hover:bg-[#ff1133]/10 transition-all duration-300">
-                <p className="font-mono text-[#a8c4d8] text-xs tracking-[0.25em] uppercase mb-3 group-hover:text-white transition-colors duration-300">HOSTING &amp; CARE</p>
+                <p className="font-mono text-[#a8c4d8] text-xs sm:text-base tracking-[0.25em] uppercase mb-3 group-hover:text-white transition-colors duration-300">HOSTING &amp; CARE</p>
                 <p className="font-mono font-bold text-4xl text-[#e8f4fd] mb-1">
                   <span className="text-[#00e5ff] group-hover:text-[#ff1133] transition-colors duration-300">R250</span>
                   <span className="text-[#a8c4d8] text-lg group-hover:text-white transition-colors duration-300">/month</span>
@@ -374,7 +374,7 @@ export default function HomePage() {
 
               {/* Retainer */}
               <div className="reveal reveal-delay-3 group border-2 border-[#00e5ff]/15 p-8 flex flex-col hover:border-[#00e5ff] hover:bg-[#ff1133]/10 transition-all duration-300">
-                <p className="font-mono text-[#a8c4d8] text-xs tracking-[0.25em] uppercase mb-3 group-hover:text-white transition-colors duration-300">RETAINER</p>
+                <p className="font-mono text-[#a8c4d8] text-xs sm:text-base tracking-[0.25em] uppercase mb-3 group-hover:text-white transition-colors duration-300">RETAINER</p>
                 <div className="mb-1">
                   <span className="font-mono text-[#a8c4d8] text-xs tracking-widest uppercase group-hover:text-white transition-colors duration-300">from</span>
                   <p className="font-mono font-bold text-4xl text-[#e8f4fd]">
