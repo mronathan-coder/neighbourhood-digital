@@ -1,6 +1,7 @@
 import Navbar from "@/app/components/Navbar";
 import ScrollRevealInit from "@/app/components/ScrollRevealInit";
 import FAQ from "@/app/components/FAQ";
+import WorkSection from "@/app/components/WorkSection";
 
 /* ─── Pixel Invader SVG ─────────────────────────────────────────── */
 
@@ -483,62 +484,7 @@ export default function HomePage() {
         <FAQ />
 
         {/* ══════════════════ WORK ══════════════════ */}
-        <section id="work" className="relative py-16 px-6 bg-[#071020]">
-          <Crosshairs />
-          <div className="max-w-7xl mx-auto">
-            <div className="reveal mb-16">
-              <p className="font-mono text-[#00e5ff] text-base tracking-[0.3em] uppercase mb-4">
-                // recent work
-              </p>
-              <h2 className="font-mono font-bold text-4xl sm:text-5xl text-[#e8f4fd] tracking-tight">
-                BUILT FOR REAL BUSINESSES.
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  gradient: "linear-gradient(135deg, #1a0a2e 0%, #2d0a4e 60%, #0a0a1e 100%)",
-                  tag: "RESTAURANT",
-                  name: "Mama J's Kitchen",
-                  desc: "Menu driven by Google Sheets. Owner updates prices themselves — site reflects it in seconds.",
-                  delay: 1,
-                },
-                {
-                  gradient: "linear-gradient(135deg, #001a2e 0%, #003d5c 60%, #001018 100%)",
-                  tag: "AUTO REPAIR",
-                  name: "AutoCare Pro",
-                  desc: "Clean one-pager with services, location, and a WhatsApp booking button. Live in 9 days.",
-                  delay: 2,
-                },
-                {
-                  gradient: "linear-gradient(135deg, #0a1e0a 0%, #0a3018 60%, #050f05 100%)",
-                  tag: "GARDEN & PLANTS",
-                  name: "Lush Garden Centre",
-                  desc: "Seasonal stock list managed in a spreadsheet by the owner. No developer needed after handover.",
-                  delay: 3,
-                },
-              ].map((project) => (
-                <div
-                  key={project.name}
-                  className={`reveal reveal-delay-${project.delay} group border border-[#00e5ff]/10 hover:border-[#00e5ff]/30 transition-all duration-300`}
-                >
-                  <div className="h-48 relative overflow-hidden" style={{ background: project.gradient }}>
-                    <PixelInvader className="absolute bottom-3 right-3 text-[#00e5ff] opacity-20 scale-75" />
-                  </div>
-                  <div className="p-6">
-                    <span className="font-mono text-[#00e5ff] text-xs tracking-[0.25em]">{project.tag}</span>
-                    <h3 className="font-mono font-bold text-[#e8f4fd] text-base mt-2 mb-2 group-hover:text-[#00e5ff] transition-colors">
-                      {project.name}
-                    </h3>
-                    <p className="text-[#4a6080] text-sm leading-relaxed">{project.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-[#00e5ff]/10" />
-        </section>
+        <WorkSection />
 
         {/* ══════════════════ QUOTE — LIGHT SECTION ══════════════════ */}
         <section className="relative py-16 px-6 bg-[#cce8f4]">
