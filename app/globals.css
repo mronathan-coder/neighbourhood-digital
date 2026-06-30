@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-dm-sans), 'DM Sans', sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
+}
+
+@theme {
+  --color-nd-cyan: #00e5ff;
+  --color-nd-dark: #020c18;
+  --color-nd-card: #071020;
+  --color-nd-text: #e8f4fd;
+  --color-nd-muted: #4a6080;
+  --color-nd-light: #cce8f4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #020c18;
+  color: #e8f4fd;
+  /* Dot-grid texture matching the reference design */
+  background-image: radial-gradient(circle, rgba(0, 229, 255, 0.18) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Pixel invader floating */
+@keyframes float-a {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes float-b {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(3deg); }
+}
+
+.animate-float-a { animation: float-a 4s ease-in-out infinite; }
+.animate-float-b { animation: float-b 6s ease-in-out infinite; }
+.animation-delay-500  { animation-delay: 0.5s; }
+.animation-delay-1000 { animation-delay: 1s; }
+.animation-delay-1500 { animation-delay: 1.5s; }
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-2500 { animation-delay: 2.5s; }
+
+/* Hero crossfade: invader ↔ logo (10s cycle: 3s hold + 2s fade each) */
+@keyframes crossfade-invader {
+  0%, 30%  { opacity: 1; }
+  50%, 80% { opacity: 0; }
+  100%     { opacity: 1; }
+}
+
+@keyframes crossfade-logo {
+  0%, 30%  { opacity: 0; }
+  50%, 80% { opacity: 1; }
+  100%     { opacity: 0; }
+}
+
+/* Breathing pulse on the invader while visible */
+@keyframes invader-pulse {
+  0%, 100% { transform: scale(1);    filter: drop-shadow(0 0 14px rgba(0, 229, 255, 0.55)); }
+  50%      { transform: scale(1.05); filter: drop-shadow(0 0 32px rgba(0, 229, 255, 0.95)); }
+}
+
+/* Invader solo: fades in/out against dark background */
+@keyframes invader-solo {
+  0%, 40%  { opacity: 1; }
+  60%, 80% { opacity: 0; }
+  100%     { opacity: 1; }
+}
+
+/* Hero invader: cyan → fade → red → fade → repeat */
+@keyframes invader-color-fade {
+  0%   { opacity: 0; color: #00e5ff; filter: drop-shadow(0 0 0px transparent); }
+  8%   { opacity: 0; color: #00e5ff; filter: drop-shadow(0 0 0px transparent); }
+  25%  { opacity: 1; color: #00e5ff; filter: drop-shadow(0 0 18px rgba(0, 229, 255, 0.6)); }
+  50%  { opacity: 1; color: #00e5ff; filter: drop-shadow(0 0 18px rgba(0, 229, 255, 0.6)); }
+  58%  { opacity: 0; color: #00e5ff; filter: drop-shadow(0 0 0px transparent); }
+  66%  { opacity: 0; color: #ff1133; filter: drop-shadow(0 0 0px transparent); }
+  75%  { opacity: 1; color: #ff1133; filter: drop-shadow(0 0 18px rgba(255, 17, 51, 0.6)); }
+  92%  { opacity: 1; color: #ff1133; filter: drop-shadow(0 0 18px rgba(255, 17, 51, 0.6)); }
+  100% { opacity: 0; color: #ff1133; filter: drop-shadow(0 0 0px transparent); }
+}
+
+/* Gentle breathing scale */
+@keyframes invader-breathe {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.07); }
+}
