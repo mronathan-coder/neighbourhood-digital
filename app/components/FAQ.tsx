@@ -13,7 +13,7 @@ const FAQS = [
   },
   {
     q: "Who hosts my website once it's built?",
-    a: "We host it for you as part of your monthly plan. This is included in your Hosting & Care fee (R350/month) or Retainer (R750/month). It means your site stays fast, secure, and online with zero effort from you.",
+    a: "We host it for you as part of your monthly plan. This is included in your Hosting & Care fee (R250/month) or Retainer (R750/month). It means your site stays fast, secure, and online with zero effort from you.",
   },
   {
     q: "Can I host my website myself, or keep it with my current hosting company (e.g. Afrihost, Domains.co.za)?",
@@ -83,7 +83,7 @@ export default function FAQ() {
                 className="overflow-hidden transition-all duration-300 ease-in-out"
                 style={{ maxHeight: openIndex === i ? "600px" : "0px" }}
               >
-                <p className="text-[#4a6080] text-sm sm:text-base leading-relaxed px-6 sm:px-8 pb-6 pt-1">
+                <p className="text-[#a8c4d8] text-sm sm:text-base leading-relaxed px-6 sm:px-8 pb-6 pt-1">
                   {faq.a}
                 </p>
               </div>

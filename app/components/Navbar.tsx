@@ -4,9 +4,9 @@ import { useState } from "react";
 import Image from "next/image";
 
 const navLinks = [
-  { href: "#services",     label: "// WHY ND" },
+  { href: "#services",     label: "// WHY US?" },
   { href: "#how-it-works", label: "// THE PROCESS" },
-  { href: "#pricing",      label: "// PRICING" },
+  { href: "#pricing",      label: "// PRICING & WHAT'S INCLUDED" },
   { href: "#faq",          label: "// FAQ" },
   { href: "#work",         label: "// RECENT WORK" },
   { href: "#contact",      label: "// CONTACT" },
@@ -26,7 +26,7 @@ export default function Navbar() {
             alt="Neighbourhood Digital"
             width={400}
             height={160}
-            className="h-24 w-auto object-contain"
+            className="h-20 sm:h-24 w-auto object-contain"
             priority
           />
         </a>

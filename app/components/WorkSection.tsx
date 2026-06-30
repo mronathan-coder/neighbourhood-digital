@@ -149,14 +149,14 @@ function PreviewModal({
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-[#4a6080] text-xs hover:text-[#00e5ff] tracking-widest transition-colors whitespace-nowrap"
+              className="font-mono text-[#a8c4d8] text-xs hover:text-[#00e5ff] tracking-widest transition-colors whitespace-nowrap"
             >
               OPEN IN NEW TAB ↗
             </a>
             <button
               onClick={onClose}
               aria-label="Close preview"
-              className="font-mono text-[#4a6080] text-2xl hover:text-white transition-colors leading-none w-8 h-8 flex items-center justify-center"
+              className="font-mono text-[#a8c4d8] text-2xl hover:text-white transition-colors leading-none w-8 h-8 flex items-center justify-center"
             >
               ×
             </button>
@@ -189,7 +189,7 @@ function PreviewModal({
 
           {loadState === "failed" && (
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 p-8 text-center">
-              <p className="font-mono text-[#4a6080] text-sm leading-relaxed max-w-sm">
+              <p className="font-mono text-[#a8c4d8] text-sm leading-relaxed max-w-sm">
                 This site can&apos;t be previewed in an embedded window.
               </p>
               <a
@@ -251,7 +251,7 @@ export default function WorkSection() {
                   <div className="absolute inset-0 bg-[#020c18]/60 group-hover:bg-[#020c18]/30 transition-all duration-400" />
 
                   {project.concept && (
-                    <span className="absolute top-3 left-3 font-mono text-[10px] tracking-widest border border-[#4a6080]/60 text-[#4a6080] px-2 py-1 bg-[#020c18]/60 z-10">
+                    <span className="absolute top-3 left-3 font-mono text-[10px] tracking-widest border border-[#4a6080]/60 text-[#a8c4d8] px-2 py-1 bg-[#020c18]/60 z-10">
                       CONCEPT
                     </span>
                   )}
@@ -271,7 +271,7 @@ export default function WorkSection() {
                       {project.tag}
                     </span>
                     {project.concept && (
-                      <span className="font-mono text-[10px] tracking-widest border border-[#4a6080]/40 text-[#4a6080] px-2 py-0.5">
+                      <span className="font-mono text-[10px] tracking-widest border border-[#4a6080]/40 text-[#a8c4d8] px-2 py-0.5">
                         CONCEPT
                       </span>
                     )}
@@ -279,7 +279,7 @@ export default function WorkSection() {
                   <h3 className="font-mono font-bold text-[#e8f4fd] text-base mb-2 group-hover:text-[#00e5ff] transition-colors">
                     {project.name}
                   </h3>
-                  <p className="text-[#4a6080] text-sm leading-relaxed">{project.desc}</p>
+                  <p className="text-[#a8c4d8] text-sm leading-relaxed">{project.desc}</p>
                 </div>
               </button>
             ))}
